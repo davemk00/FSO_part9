@@ -1,7 +1,23 @@
+interface MultipleValues {
+  height: number;
+  weight: number;
+}
 
+const parseArgs = (args: Array<string>): MultipleValues => {
+  if (!(isNaN(Number(args[2])) || isNaN(Number(args[3]))) ) {
+    return {
+      height: Number(args[2]),
+      weight: Number(args[3]),
+    }
+  } else {
+    throw new Error("Argument(s) given are not numbers") 
+  }
+
+}
 
 const calculateBmi = (height: number, weight: number): string => {
   const bmi = (weight / ( height * height / 10000 )); 
+  console.log(bmi);
   
   if (bmi < 15) {
     return "Very severely underweight"
@@ -19,10 +35,15 @@ const calculateBmi = (height: number, weight: number): string => {
     return "Obese Class II (Severely obese)"
   } else {
     return "Obese Class III (Very severely obese)"
-  } 
-
+  }
 }
 
-console.log(calculateBmi(180, 74));
+try {
+  const { height, weight } = parseArgs(process.argv);
+  console.log(calculateBmi(height, weight));
+} catch (e) {
+  console.log('Error, something bad happened, message: ', e.message);
+}
+
 
 

@@ -1,4 +1,4 @@
-interface TrainingData { 
+interface TrainingReport { 
   periodLength: number;
   trainingDays: number;
   success: boolean;
@@ -8,7 +8,27 @@ interface TrainingData {
   average: number;
 }
 
-const exersiceCalculator = (args: Array<number>, target: number): TrainingData => {
+interface ExerciseData {
+  target: number,
+  hours: Array<number>
+}
+
+const parseExerciseArgs = (args: Array<string>): ExerciseData => {
+  if (!args.some(x => isNaN(Number(x)))) {
+    const target = Number(args[2]);
+    const hours: Array<number> = args.slice(3).map((x) => +x);
+    
+    return {
+      target: target,
+      hours: hours,
+    }
+
+  } else {
+    throw new Error("Argument(s) given are not numbers") 
+  }
+}
+
+const exersiceCalculator = (args: Array<number>, target: number): TrainingReport => {
   const periodLength = args.length;
   const trainingDays = args.filter(x => x>0).length;
   const sumHours = args.reduce((a, b) => a + b);
@@ -38,6 +58,10 @@ const exersiceCalculator = (args: Array<number>, target: number): TrainingData =
   }
 }
 
-const hours = [3, 0, 2, 4.5, 0, 3, 1]
-const target = 2
-console.log(exersiceCalculator(hours, target));
+try {
+  const { target, hours } = parseExerciseArgs(process.argv);
+  console.log(exersiceCalculator(hours, target));
+} catch (e) {
+  console.log('Error, something bad happened, message: ', e.message);
+}
+
