@@ -11,5 +11,8 @@
 - added cli function to bmiCalculator
 - added cli function to exerciseCalculator
 
+**Commit 3** - 9.4 Express
+- added index.ts
+- hello endpoint
 
 
