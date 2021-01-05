@@ -4,4 +4,9 @@
 - setup node.ts
 - bmi calc
 
+**Commit 2** - 9.2 Exercise calculator
+- done the exercise calculator
+
+
+
 
