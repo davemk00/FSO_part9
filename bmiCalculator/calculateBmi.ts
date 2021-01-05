@@ -46,4 +46,4 @@ try {
 }
 
 
-
+export default(calculateBmi)

@@ -11,8 +11,11 @@
 - added cli function to bmiCalculator
 - added cli function to exerciseCalculator
 
-**Commit 3** - 9.4 Express
+**Commit 4** - 9.4 Express
 - added index.ts
 - hello endpoint
+
+**Commit 5** - 9.5 WebBMI
+- BMI calc HTTP GET request
 
 
