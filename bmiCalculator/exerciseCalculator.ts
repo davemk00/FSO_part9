@@ -10,7 +10,7 @@ interface TrainingReport {
 
 interface ExerciseData {
   target: number,
-  hours: Array<number>
+  hours: Array<number>,
 }
 
 const parseExerciseArgs = (args: Array<string>): ExerciseData => {
@@ -28,10 +28,10 @@ const parseExerciseArgs = (args: Array<string>): ExerciseData => {
   }
 };
 
-const exersiceCalculator = (args: Array<number>, target: number): TrainingReport => {
-  const periodLength = args.length;
-  const trainingDays = args.filter(x => x>0).length;
-  const sumHours = args.reduce((a, b) => a + b);
+export const exerciseCalculator = (hours: Array<number>, target: number): TrainingReport => {
+  const periodLength = hours.length;
+  const trainingDays = hours.filter(x => x>0).length;
+  const sumHours = hours.reduce((a, b) => a + b);
   const average = sumHours/periodLength;
   let rating = 0;
   let ratingDescription = "issue";
@@ -58,11 +58,11 @@ const exersiceCalculator = (args: Array<number>, target: number): TrainingReport
   };
 };
 
-try {
-  const { target, hours } = parseExerciseArgs(process.argv);
-  console.log(exersiceCalculator(hours, target));
-} catch (e) {
-  console.log('Error, something bad happened, message: ', e.message);  // eslint-disable-line
+if (require.main === module) {
+  try {
+    const { target, hours } = parseExerciseArgs(process.argv);
+    console.log(exerciseCalculator(hours, target));
+  } catch (e) {
+    console.log('Error, something bad happened, message: ', e.message);  // eslint-disable-line
+  }
 }
-
-export default(exersiceCalculator);
