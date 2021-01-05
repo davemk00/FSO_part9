@@ -21,20 +21,20 @@ const parseExerciseArgs = (args: Array<string>): ExerciseData => {
     return {
       target: target,
       hours: hours,
-    }
+    };
 
   } else {
-    throw new Error("Argument(s) given are not numbers") 
+    throw new Error("Argument(s) given are not numbers");
   }
-}
+};
 
 const exersiceCalculator = (args: Array<number>, target: number): TrainingReport => {
   const periodLength = args.length;
   const trainingDays = args.filter(x => x>0).length;
   const sumHours = args.reduce((a, b) => a + b);
   const average = sumHours/periodLength;
-  let rating = 0
-  let ratingDescription = "issue"
+  let rating = 0;
+  let ratingDescription = "issue";
 
   if (average > target) {
     rating = 1;
@@ -55,13 +55,14 @@ const exersiceCalculator = (args: Array<number>, target: number): TrainingReport
     ratingDescription: ratingDescription,
     target: target,
     average: average,
-  }
-}
+  };
+};
 
 try {
   const { target, hours } = parseExerciseArgs(process.argv);
   console.log(exersiceCalculator(hours, target));
 } catch (e) {
-  console.log('Error, something bad happened, message: ', e.message);
+  console.log('Error, something bad happened, message: ', e.message);  // eslint-disable-line
 }
 
+export default(exersiceCalculator);

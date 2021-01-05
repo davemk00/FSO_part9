@@ -18,4 +18,8 @@
 **Commit 5** - 9.5 WebBMI
 - BMI calc HTTP GET request
 
+**Commit 6** - 9.6 Eslint
+- lint setup
+
+
 
