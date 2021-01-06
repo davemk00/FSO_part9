@@ -4,3 +4,10 @@
 - initialisation
 - HTTP GET route /ping
 
+**Commit 9** - 9.9: Patientor backend, step2
+- cloned the repo
+- fixed the uri constant
+- fixed cors issue
+
+
+
