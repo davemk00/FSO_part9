@@ -21,7 +21,7 @@
 **Commit 6** - 9.6 Eslint
 - lint setup
 
-**Commit 6** - 9.7 WebExercises
+**Commit 7** - 9.7 WebExercises
 - did exercisecalc by HTTP POST
 - not sure if it's correct. Works when using the REST client and json header
 - some linting too
