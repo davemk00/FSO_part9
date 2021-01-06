@@ -12,5 +12,7 @@
 **Commit 10** - 9.10: Patientor backend, step3
 - diagnoses return to a HTTP GET
 
-
+**Commit 11** - 9.11: Patientor backend, step4
+- Patient endpoint
+- excluded ssn
 
