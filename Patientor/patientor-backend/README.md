@@ -16,3 +16,7 @@
 - Patient endpoint
 - excluded ssn
 
+**Commit 11** - 9.12: Patientor backend, step5
+- added addPatient functionality
+
+
