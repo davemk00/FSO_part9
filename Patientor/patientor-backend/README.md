@@ -16,7 +16,10 @@
 - Patient endpoint
 - excluded ssn
 
-**Commit 11** - 9.12: Patientor backend, step5
+**Commit 12** - 9.12: Patientor backend, step5
 - added addPatient functionality
 
+**Commit 13** - 9.13: Patientor backend, step6
+- added validation through utils.ts
+- Refactored Gender field to use an enum type
 
