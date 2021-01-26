@@ -27,3 +27,5 @@
 - added patient/:id route
 - entries added
 
+**Commit 17** - 9.17: patientor, step2
+- updated patientsRouter.get('/:id'   with send and errors
