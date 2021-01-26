@@ -23,3 +23,7 @@
 - added validation through utils.ts
 - Refactored Gender field to use an enum type
 
+**Commit 16** - 9.16: patientor, step1
+- added patient/:id route
+- entries added
+
