@@ -17,5 +17,9 @@
 - added patient page
 - changed frontend from sub-module - probably means im missing lost of commits before - github is hard
 
+**Commit 18** - 9.18: patientor, step3
+- refactored action creators
+
+
 
 
