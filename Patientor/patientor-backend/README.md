@@ -29,3 +29,8 @@
 
 **Commit 17** - 9.17: patientor, step2
 - updated patientsRouter.get('/:id'   with send and errors
+
+**Commit 19** - 9.19: patientor, step4
+- Backend added OccupationalHealthCareEntry and HospitalEntry
+- Some vague type validation
+
